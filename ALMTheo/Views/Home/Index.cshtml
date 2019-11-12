@@ -12,7 +12,7 @@
             {
                 <ul class="list-group">
                     <li class="list-group-item">
-                        <h3> @acc.Name  </h3>
+                        <h3> @(acc.Name+ " Kund Id " + acc.CustomerID) </h3>
                         @foreach (var i in Model.AccountsList.Where(m => m.CustomerID == acc.CustomerID))
                         {
                             <ul style="border-bottom:solid 2px black" >
