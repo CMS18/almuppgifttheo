@@ -12,10 +12,16 @@ namespace ALMTheo.Controllers
     {
         public IActionResult Index()
         {
-            return View();
+       
+            var model = new BankRepository();
+            
+            
+
+
+            return View("Index", model);
         }
 
-     
+   
 
       
 
