@@ -1,32 +1,11 @@
 ﻿@{
     ViewData["Title"] = "Home Page";
 }
-@model ALMTheo.Models.BankRepository
+
 <div>
    
   
-        <h2>Hej</h2>
-        <p>Kunder</p>
-        <div style="width: 20em" >
-            @foreach (var acc in Model.CustomerList)
-            {
-                <ul class="list-group">
-                    <li class="list-group-item">
-                        <h3> @(acc.Name+ " Kund Id " + acc.CustomerID) </h3>
-                        @foreach (var i in Model.AccountsList.Where(m => m.CustomerID == acc.CustomerID))
-                        {
-                            <ul style="border-bottom:solid 2px black" >
-                                <li>
-                                    <h4> @("Account : " + i.AccountID)</h4>
-                                    <h4> @("Saldo :" + i.Money)</h4>
-                                </li>
-                               
-                            </ul>
-                        }
-                    </li>
-                </ul>
-                <br />
-
-            }
-        </div>
+        <h3>Hej</h3>
+        <p>uhasdhasiuhdkjashds</p>
+    
 </div>
