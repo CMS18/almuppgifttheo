@@ -28,7 +28,7 @@ namespace ALMTheo.Controllers
                 return View("~/Views/Home/Index.cshtml", repo);
             }
 
-            ViewBag.Error = "Something went wrong. Make sure you use existing account numbers, and that the amount is correct.";
+            ViewBag.Error = "Something went wrong. Make sure you use existing account number/numbers, and that the amount is correct.";
 
             return View("Index");
         }
