@@ -10,25 +10,38 @@ namespace ALMTheo.Controllers
 {
     public class HomeController : Controller
     {
+
+
+        public bool firsttime;
+
         public IActionResult Index()
         {
-       
-            var model = new BankRepository();
-            
-            
+            if (firsttime == false)
+            {
+                var model = new BankRepository();
+                firsttime = true;
+                return View("Index", model);
+            }
+            else { return View("Index"); }
 
-
-            return View("Index", model);
         }
 
-   
+        public IActionResult Update(BankRepository repo)
+        {
+            return View("Index", repo);
+        }
 
-      
+
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
+
+
+
+      
+
     }
 }
