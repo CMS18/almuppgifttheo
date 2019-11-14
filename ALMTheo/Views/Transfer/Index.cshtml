@@ -1,0 +1,20 @@
+﻿
+<h1>Överföring mellan konton:</h1>
+
+<h1 style="font-weight:bolder; color:darkred;">@ViewBag.Error</h1>
+
+<form asp-action="Transfer" asp-controller="Transfer" method="post">
+    <label>Från konto:</label>
+    <hr />
+    <input type="text" name="accountFrom" />
+    <hr />
+    <label>Till konto:</label>
+    <hr />
+    <input type="text" name="accountTo" />
+    <hr />
+    <label>Belopp:</label>
+    <hr />
+    <input type="text" name="money" />
+    <hr />
+    <input type="submit" value="Överför"/>
+</form>
