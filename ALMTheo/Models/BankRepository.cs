@@ -55,23 +55,5 @@ namespace ALMTheo.Models
             return account;
         }
 
-        public bool Transfer(int accountFrom, int accountTo, decimal money)
-        {
-            var accFrom = AccountsList.SingleOrDefault(m => m.AccountID == accountFrom);
-            var accTo = AccountsList.SingleOrDefault(m => m.AccountID == accountTo);
-
-
-
-            if (accFrom == null || accTo == null || money < 0 || accFrom.Money < money)
-            {
-                return false;
-            }
-
-            accFrom.Money -= money;
-            accTo.Money += money;
-
-            return true;
-        }
-
     }
 }
