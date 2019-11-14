@@ -60,5 +60,31 @@ namespace ALMTesting
             Assert.False(account);
 
         }
+
+        [Fact]
+        public void TestTransferMoney()
+        {
+            //Arrange
+            var bankrepo = new BankRepository();
+
+            //Act
+            var transfer = bankrepo.Transfer(2, 1, 100);
+
+            //Assert
+            Assert.True(transfer);
+        }
+
+        [Fact]
+        public void TestTransferTooMuchMoney()
+        {
+            //Arrange
+            var bankrepo = new BankRepository();
+
+            //Act
+            var transfer = bankrepo.Transfer(1, 2, 100000);
+
+            //Assert
+            Assert.False(transfer);
+        }
     }
 }
